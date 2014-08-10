@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Coral">
+
+
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:text="Help"
+        android:background="@drawable/button_shape_selector"
+        android:layout_margin="10dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Network Search"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        android:padding="5dip"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+    <ImageButton
+        android:id="@+id/refreshSearch"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:background="@drawable/refresh_button_selector"
+        android:layout_margin="10dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+
+
+</RelativeLayout>
