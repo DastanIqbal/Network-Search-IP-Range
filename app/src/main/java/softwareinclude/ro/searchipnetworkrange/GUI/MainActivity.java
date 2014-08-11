@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -40,6 +41,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private Button helpButton;
     private ImageButton refreshSearch;
     private ListView ipListView;
+    private TextView displayNumIP;
 
     private ArrayAdapter<String> adapter;
 
@@ -68,6 +70,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         refreshSearch = (ImageButton)findViewById(R.id.refreshSearch);
         refreshSearch.setOnClickListener(this);
 
+        displayNumIP = (TextView) findViewById(R.id.displayNumIP);
         ipListView = (ListView)findViewById(R.id.ipListView);
 
         progressDialog = CustomDialog.ctor(this);
@@ -92,6 +95,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
                     case REFRESH_LIST: {
                         adapter.notifyDataSetChanged();
                         adapter.notifyDataSetInvalidated();
+                        displayNumIP.setText("Search IP found: "+ GlobalData.Data.getFoundIPList().size());
                         break;
                     }
                 }}};
@@ -167,6 +171,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 if(isWifiAvailable()){
                     progressDialog.show();
                     GlobalData.Data.foundIPList.clear();
+                    displayNumIP.setText("");
                     handler.sendMessage(Message.obtain(handler, REFRESH_LIST, null));
                     String subnetAddress = findSubnetAddress();
                     searchInternetProtocolAddress(subnetAddress);

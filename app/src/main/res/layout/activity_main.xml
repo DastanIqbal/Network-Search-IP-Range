@@ -1,16 +1,27 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <include layout="@layout/main_titlebar" />
+    <include android:id="@+id/titlebar" layout="@layout/main_titlebar" />
 
 
     <ListView
         android:id="@+id/ipListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar"
+        android:layout_marginBottom="40dip"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/displayNumIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dip"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
