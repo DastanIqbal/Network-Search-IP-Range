@@ -1,5 +1,6 @@
 package softwareinclude.ro.searchipnetworkrange.Util;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ public enum GlobalData {
 
     Data;
 
-    public List<String> foundIPList;
+    public List<String> foundIPList = new ArrayList<String>();
 
 
     public List<String> getFoundIPList() {
@@ -19,6 +20,5 @@ public enum GlobalData {
     public void setFoundIPList(List<String> foundIPList) {
         this.foundIPList = foundIPList;
     }
-
 
 }

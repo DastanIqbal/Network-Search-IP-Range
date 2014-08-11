@@ -5,6 +5,6 @@ package softwareinclude.ro.searchipnetworkrange.Util;
  */
 public class ApplicationConstants {
 
-
+    public static final int SEARCH_THREAD_NUMBER = 150;
 
 }
