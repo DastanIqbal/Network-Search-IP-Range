@@ -10,6 +10,4 @@ This application demo contains only two buttons, a refresh and a help button.
 <img alt="Search Network IP" src="https://github.com/ManolescuSebastian/Network-Search-IP-Range/blob/master/screenshots/search_ip_three.png" height="400px" />
 
 
-For any questions please access http://software-include.ro website and use the contact section.
-
 Application developement in progress.
